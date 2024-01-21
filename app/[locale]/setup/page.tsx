@@ -176,49 +176,49 @@ export default function SetupPage() {
         )
 
       // API Step
-      case 2:
-        return (
-          <StepContainer
-            stepDescription="Enter API keys for each service you'd like to use."
-            stepNum={currentStep}
-            stepTitle="Set API Keys"
-            onShouldProceed={handleShouldProceed}
-            showNextButton={true}
-            showBackButton={true}
-          >
-            <APIStep
-              openaiAPIKey={openaiAPIKey}
-              openaiOrgID={openaiOrgID}
-              azureOpenaiAPIKey={azureOpenaiAPIKey}
-              azureOpenaiEndpoint={azureOpenaiEndpoint}
-              azureOpenai35TurboID={azureOpenai35TurboID}
-              azureOpenai45TurboID={azureOpenai45TurboID}
-              azureOpenai45VisionID={azureOpenai45VisionID}
-              anthropicAPIKey={anthropicAPIKey}
-              googleGeminiAPIKey={googleGeminiAPIKey}
-              mistralAPIKey={mistralAPIKey}
-              perplexityAPIKey={perplexityAPIKey}
-              useAzureOpenai={useAzureOpenai}
-              onOpenaiAPIKeyChange={setOpenaiAPIKey}
-              onOpenaiOrgIDChange={setOpenaiOrgID}
-              onAzureOpenaiAPIKeyChange={setAzureOpenaiAPIKey}
-              onAzureOpenaiEndpointChange={setAzureOpenaiEndpoint}
-              onAzureOpenai35TurboIDChange={setAzureOpenai35TurboID}
-              onAzureOpenai45TurboIDChange={setAzureOpenai45TurboID}
-              onAzureOpenai45VisionIDChange={setAzureOpenai45VisionID}
-              onAnthropicAPIKeyChange={setAnthropicAPIKey}
-              onGoogleGeminiAPIKeyChange={setGoogleGeminiAPIKey}
-              onMistralAPIKeyChange={setMistralAPIKey}
-              onPerplexityAPIKeyChange={setPerplexityAPIKey}
-              onUseAzureOpenaiChange={setUseAzureOpenai}
-              openrouterAPIKey={openrouterAPIKey}
-              onOpenrouterAPIKeyChange={setOpenrouterAPIKey}
-            />
-          </StepContainer>
-        )
+      // case 2:
+      //   return (
+      //     <StepContainer
+      //       stepDescription="Enter API keys for each service you'd like to use."
+      //       stepNum={currentStep}
+      //       stepTitle="Set API Keys"
+      //       onShouldProceed={handleShouldProceed}
+      //       showNextButton={true}
+      //       showBackButton={true}
+      //     >
+      //       <APIStep
+      //         openaiAPIKey={openaiAPIKey}
+      //         openaiOrgID={openaiOrgID}
+      //         azureOpenaiAPIKey={azureOpenaiAPIKey}
+      //         azureOpenaiEndpoint={azureOpenaiEndpoint}
+      //         azureOpenai35TurboID={azureOpenai35TurboID}
+      //         azureOpenai45TurboID={azureOpenai45TurboID}
+      //         azureOpenai45VisionID={azureOpenai45VisionID}
+      //         anthropicAPIKey={anthropicAPIKey}
+      //         googleGeminiAPIKey={googleGeminiAPIKey}
+      //         mistralAPIKey={mistralAPIKey}
+      //         perplexityAPIKey={perplexityAPIKey}
+      //         useAzureOpenai={useAzureOpenai}
+      //         onOpenaiAPIKeyChange={setOpenaiAPIKey}
+      //         onOpenaiOrgIDChange={setOpenaiOrgID}
+      //         onAzureOpenaiAPIKeyChange={setAzureOpenaiAPIKey}
+      //         onAzureOpenaiEndpointChange={setAzureOpenaiEndpoint}
+      //         onAzureOpenai35TurboIDChange={setAzureOpenai35TurboID}
+      //         onAzureOpenai45TurboIDChange={setAzureOpenai45TurboID}
+      //         onAzureOpenai45VisionIDChange={setAzureOpenai45VisionID}
+      //         onAnthropicAPIKeyChange={setAnthropicAPIKey}
+      //         onGoogleGeminiAPIKeyChange={setGoogleGeminiAPIKey}
+      //         onMistralAPIKeyChange={setMistralAPIKey}
+      //         onPerplexityAPIKeyChange={setPerplexityAPIKey}
+      //         onUseAzureOpenaiChange={setUseAzureOpenai}
+      //         openrouterAPIKey={openrouterAPIKey}
+      //         onOpenrouterAPIKeyChange={setOpenrouterAPIKey}
+      //       />
+      //     </StepContainer>
+      //   )
 
       // Workspace Step
-      case 3:
+      case 2:
         return (
           <StepContainer
             stepDescription="Select the default settings for your home workspace."
@@ -238,7 +238,7 @@ export default function SetupPage() {
         )
 
       // Finish Step
-      case 4:
+      case 3:
         return (
           <StepContainer
             stepDescription="You are all set up!"

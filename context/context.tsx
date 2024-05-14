@@ -5,9 +5,10 @@ import {
   ChatSettings,
   LLM,
   MessageImage,
-  OpenRouterLLM
+  OpenRouterLLM,
+  WorkspaceImage
 } from "@/types"
-import { AssistantImage } from "@/types/assistant-image"
+import { AssistantImage } from "@/types/images/assistant-image"
 import { VALID_ENV_KEYS } from "@/types/valid-keys"
 import { Dispatch, SetStateAction, createContext } from "react"
 
@@ -51,6 +52,8 @@ interface ChatbotUIContext {
   // WORKSPACE STORE
   selectedWorkspace: Tables<"workspaces"> | null
   setSelectedWorkspace: Dispatch<SetStateAction<Tables<"workspaces"> | null>>
+  workspaceImages: WorkspaceImage[]
+  setWorkspaceImages: Dispatch<SetStateAction<WorkspaceImage[]>>
 
   // PRESET STORE
   selectedPreset: Tables<"presets"> | null
@@ -89,10 +92,10 @@ interface ChatbotUIContext {
   setIsPromptPickerOpen: Dispatch<SetStateAction<boolean>>
   slashCommand: string
   setSlashCommand: Dispatch<SetStateAction<string>>
-  isAtPickerOpen: boolean
-  setIsAtPickerOpen: Dispatch<SetStateAction<boolean>>
-  atCommand: string
-  setAtCommand: Dispatch<SetStateAction<string>>
+  isFilePickerOpen: boolean
+  setIsFilePickerOpen: Dispatch<SetStateAction<boolean>>
+  hashtagCommand: string
+  setHashtagCommand: Dispatch<SetStateAction<string>>
   isToolPickerOpen: boolean
   setIsToolPickerOpen: Dispatch<SetStateAction<boolean>>
   toolCommand: string
@@ -103,6 +106,12 @@ interface ChatbotUIContext {
   setFocusFile: Dispatch<SetStateAction<boolean>>
   focusTool: boolean
   setFocusTool: Dispatch<SetStateAction<boolean>>
+  focusAssistant: boolean
+  setFocusAssistant: Dispatch<SetStateAction<boolean>>
+  atCommand: string
+  setAtCommand: Dispatch<SetStateAction<string>>
+  isAssistantPickerOpen: boolean
+  setIsAssistantPickerOpen: Dispatch<SetStateAction<boolean>>
 
   // ATTACHMENTS STORE
   chatFiles: ChatFile[]
@@ -169,6 +178,8 @@ export const ChatbotUIContext = createContext<ChatbotUIContext>({
   // WORKSPACE STORE
   selectedWorkspace: null,
   setSelectedWorkspace: () => {},
+  workspaceImages: [],
+  setWorkspaceImages: () => {},
 
   // PRESET STORE
   selectedPreset: null,
@@ -207,10 +218,10 @@ export const ChatbotUIContext = createContext<ChatbotUIContext>({
   setIsPromptPickerOpen: () => {},
   slashCommand: "",
   setSlashCommand: () => {},
-  isAtPickerOpen: false,
-  setIsAtPickerOpen: () => {},
-  atCommand: "",
-  setAtCommand: () => {},
+  isFilePickerOpen: false,
+  setIsFilePickerOpen: () => {},
+  hashtagCommand: "",
+  setHashtagCommand: () => {},
   isToolPickerOpen: false,
   setIsToolPickerOpen: () => {},
   toolCommand: "",
@@ -221,6 +232,12 @@ export const ChatbotUIContext = createContext<ChatbotUIContext>({
   setFocusFile: () => {},
   focusTool: false,
   setFocusTool: () => {},
+  focusAssistant: false,
+  setFocusAssistant: () => {},
+  atCommand: "",
+  setAtCommand: () => {},
+  isAssistantPickerOpen: false,
+  setIsAssistantPickerOpen: () => {},
 
   // ATTACHMENTS STORE
   chatFiles: [],
